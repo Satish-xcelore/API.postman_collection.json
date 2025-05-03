@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "e71c3131-1493-4caa-bc79-4c483bbd98b6",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44487265",
+		"_collection_link": "https://satishchandra-7642641.postman.co/workspace/Satish-Chandra's-Workspace~aefc8aeb-d6d0-4ac1-8927-1d1e1a61c1e4/collection/44487265-e71c3131-1493-4caa-bc79-4c483bbd98b6?action=share&source=collection_link&creator=44487265"
+	},
+	"item": [
+		{
+			"name": "Add User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create-user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fullName\": \"string\",\r\n  \"emailId\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-dev.docsora.com/api/v1/user/create-user",
+					"protocol": "https",
+					"host": [
+						"api-dev",
+						"docsora",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"create-user"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://api-dev.docsora.com/api/v1/user/create-user' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"fullName\": \"string\",\r\n  \"emailId\": \"string\",\r\n  \"password\": \"string\"\r\n}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"emailId\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-dev.docsora.com/api/v1/auth/login",
+					"protocol": "https",
+					"host": [
+						"api-dev",
+						"docsora",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://api-dev.docsora.com/api/v1/auth/login' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"emailId\": \"string\",\r\n  \"password\": \"string\"\r\n}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "forgot-password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"emailId\": \"tree\",\r\n  \"createPassword\": \"cG@Dfmw2%S1hmWQJ$F1@uufK\",\r\n  \"confirmPassword\": \"stringst\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-dev.docsora.com/api/v1/auth/forgot-password",
+					"protocol": "https",
+					"host": [
+						"api-dev",
+						"docsora",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"forgot-password"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://api-dev.docsora.com/api/v1/auth/forgot-password' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"emailId\": \"tree\",\r\n  \"createPassword\": \"cG@Dfmw2%S1hmWQJ$F1@uufK\",\r\n  \"confirmPassword\": \"stringst\"\r\n}'\r\n"
+			},
+			"response": []
+		}
+	]
+}
