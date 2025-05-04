@@ -133,6 +133,30 @@
 		},
 		{
 			"name": "getUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f9e25ba-ed35-4d05-be9b-8c10449ca955",
+						"exec": [
+							"pm.test(\"Status Code should be 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"}\r",
+							");\r",
+							"\r",
+							"let jsonData=pm.response.json();\r",
+							"\r",
+							"pm.test(\"UserId should be {{UserId}}\",function(){\r",
+							"    pm.expect(jsonData.id).to.have.eql(\"userId\");\r",
+							"}\r",
+							"\r",
+							");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "415ddbb5-6291-4fb6-80a1-a99b2e1b5401",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -145,7 +169,7 @@
 						"value": "application/json"
 					}
 				],
-				"url": "https://api-dev.docsora.com/api/v1/user/2",
+				"url": "https://api-dev.docsora.com/api/v1/user/{{userId}}",
 				"description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://api-dev.docsora.com/api/v1/user/2' \\\r\n  -H 'accept: application/json'\r\n"
 			},
 			"response": []
