@@ -130,6 +130,25 @@
 				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://api-dev.docsora.com/api/v1/auth/forgot-password' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"emailId\": \"tree\",\r\n  \"createPassword\": \"cG@Dfmw2%S1hmWQJ$F1@uufK\",\r\n  \"confirmPassword\": \"stringst\"\r\n}'\r\n"
 			},
 			"response": []
+		},
+		{
+			"name": "getUser",
+			"id": "415ddbb5-6291-4fb6-80a1-a99b2e1b5401",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": "https://api-dev.docsora.com/api/v1/user/2",
+				"description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://api-dev.docsora.com/api/v1/user/2' \\\r\n  -H 'accept: application/json'\r\n"
+			},
+			"response": []
 		}
 	]
 }
