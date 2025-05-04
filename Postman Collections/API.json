@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "f7f134ac-f04a-44a3-be32-ab849cbd522d",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create-user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "777ea0ad-8707-4399-8c3e-20540f28429a",
+						"exec": [
+							"let requestBody={\r",
+							"  \"fullName\": \"string\",\r",
+							"  \"emailId\": \"st\",\r",
+							"  \"password\": \"string\"\r",
+							"};\r",
+							"\r",
+							"pm.environment.set(\"payload\",JSON.stringify(requestBody));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f378b10b-9d49-4f1d-b076-43f1caa2a0a6",
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "c6035509-6174-497a-94af-d4c89bf74c11",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{payload}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-dev.docsora.com/api/v1/user/create-user",
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://api-dev.docsora.com/api/v1/user/create-user' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"fullName\": \"string\",\r\n  \"emailId\": \"string\",\r\n  \"password\": \"string\"\r\n}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"id": "8744a994-4db2-45e6-917d-7f9d188f2675",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"emailId\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-dev.docsora.com/api/v1/auth/login",
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://api-dev.docsora.com/api/v1/auth/login' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"emailId\": \"string\",\r\n  \"password\": \"string\"\r\n}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "forgot-password",
+			"id": "5d440212-f5f7-46ff-b602-eeb08b66a164",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"emailId\": \"tree\",\r\n  \"createPassword\": \"cG@Dfmw2%S1hmWQJ$F1@uufK\",\r\n  \"confirmPassword\": \"stringst\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-dev.docsora.com/api/v1/auth/forgot-password",
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://api-dev.docsora.com/api/v1/auth/forgot-password' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"emailId\": \"tree\",\r\n  \"createPassword\": \"cG@Dfmw2%S1hmWQJ$F1@uufK\",\r\n  \"confirmPassword\": \"stringst\"\r\n}'\r\n"
+			},
+			"response": []
+		}
+	]
+}
